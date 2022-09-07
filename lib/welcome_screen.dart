@@ -23,31 +23,35 @@ class WelcomeScreen extends StatelessWidget {
         body:Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Spacer(flex: 10),
-                Spacer(),
-                Text(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children:[
+              Container(
+                margin: EdgeInsets.only(top: 20, left: 20, right: 20),
+                child:Text(
                         'Welcome to my Sample app',
-                        style: TextStyle(fontSize: 20.0),
-                ),
-                Spacer(flex:3),
-                Text(
-                        'Here is a pic of cat',
-                        style: TextStyle(fontSize: 20.0),
-                ),
-                SizedBox(
-                  width: 50.0,
-                  height: 50.0,
-                  child:Image.network('https://www.pexels.com/photo/selective-focus-photography-of-orange-tabby-cat-1170986/'),
+                        style: TextStyle(
+                        fontSize: 25.0,
+                        color: kPrimaryColor,
+                        fontFamily: 'Roboto',
                   ),
-                
-              ]
-            )
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 20, left: 20, right: 20),
+                child:Text(
+                        'Here is a pic',
+                        style: TextStyle(
+                        fontSize: 25.0,
+                        color: kPrimaryColor,
+                        fontFamily: 'Roboto',
+                  ),
+                ),
+              ),
+              Container(
+                // child: FittedBox(
+                  child:Image.network('https://placeimg.com/640/480/any',height: 150,fit:BoxFit.fill),
+                  ),
             ],
           ),
         )
